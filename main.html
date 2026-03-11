@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Volt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+// ═══════════════════════════════════════════════════════════════════
+//  Work Volt — i18n Translation System
+//  Supports: English (en) · French (fr)
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+
+  // ── Storage key ─────────────────────────────────────────────────
+  const LANG_KEY = 'wv_language';
+
+  // ── Translations ─────────────────────────────────────────────────
+  const TRANSLATIONS = {
+    en: {
+      // ── General ───────────────────────────────────────────
+      'Work Volt': 'Work Volt',
+      'Power your operations': 'Power your operations',
+      'Work Volt v1.0.0 • Secure Business Management': 'Work Volt v1.0.0 · Secure Business Management',
+      'Work Volt · v1.0.0': 'Work Volt · v1.0.0',
+      'Loading...': 'Loading...',
+      'Search...': 'Search...',
+      'Save': 'Save',
+      'Cancel': 'Cancel',
+      'Delete': 'Delete',
+      'Edit': 'Edit',
+      'Close': 'Close',
+      'Back': 'Back',
+      'Logout': 'Logout',
+      'Settings': 'Settings',
+      'Dashboard': 'Dashboard',
+      'Module Store': 'Module Store',
+      'Role Permissions': 'Role Permissions',
+      'Saving…': 'Saving…',
+      'Installing…': 'Installing…',
+      'Deleting…': 'Deleting…',
+      'Testing…': 'Testing…',
+      'Fetching…': 'Fetching…',
+
+      // ── Index (Login) ──────────────────────────────────────
+      'Secure Sign In': 'Secure Sign In',
+      'Work Volt URL': 'Work Volt URL',
+      'Your Google Apps Script Web App URL': 'Your Google Apps Script Web App URL',
+      'Username (Email)': 'Username (Email)',
+      'Password': 'Password',
+      'Sign In': 'Sign In',
+      'Signing in...': 'Signing in...',
+      'Contact your SuperAdmin to reset your password.': 'Contact your SuperAdmin to reset your password.',
+      'Please enter your Work Volt URL': 'Please enter your Work Volt URL',
+      'Please enter your username (email)': 'Please enter your username (email)',
+      'Please enter your password': 'Please enter your password',
+
+      // ── Header / Nav ───────────────────────────────────────
+      'Go Back': 'Go Back',
+      'Modules': 'Modules',
+      'drag to reorder': 'drag to reorder',
+      'Collapse sidebar': 'Collapse sidebar',
+      'Account': 'Account',
+      'My Profile': 'My Profile',
+      'Security & Password': 'Security & Password',
+      'Mimic Profile': 'Mimic Profile',
+
+      // ── User Dropdown ──────────────────────────────────────
+      'Profile modal — coming soon': 'Profile modal — coming soon',
+      'Security modal — coming soon': 'Security modal — coming soon',
+
+      // ── Dashboard ─────────────────────────────────────────
+      'Work Volt Dashboard': 'Work Volt Dashboard',
+      'Good morning': 'Good morning',
+      'Good afternoon': 'Good afternoon',
+      'Good evening': 'Good evening',
+      'Welcome to': 'Welcome to',
+      '— your all-in-one operations workspace, built on Google Sheets. Everything here is modular, flexible, and shaped around the way': '— your all-in-one operations workspace, built on Google Sheets. Everything here is modular, flexible, and shaped around the way',
+      'team actually works.': 'team actually works.',
+      'Available modules': 'Available modules',
+      'Add-ons installed': 'Add-ons installed',
+      'Setup complete': 'Setup complete',
+      'Get started': 'Get started',
+      'done': 'done',
+      'of': 'of',
+      'Work Volt is running': 'Work Volt is running',
+      'Your app is live and ready to configure.': 'Your app is live and ready to configure.',
+      'Connect your Google Sheet': 'Connect your Google Sheet',
+      'Link your Sheet to power real data across all modules.': 'Link your Sheet to power real data across all modules.',
+      'Connect Sheet': 'Connect Sheet',
+      'Install your first module': 'Install your first module',
+      'Visit the Module Store to add features to your sidebar.': 'Visit the Module Store to add features to your sidebar.',
+      'Open Store': 'Open Store',
+      'Invite your team': 'Invite your team',
+      'Add users, assign roles and get everyone working.': 'Add users, assign roles and get everyone working.',
+      'Manage Users': 'Manage Users',
+      'Your workspace, your way.': 'Your workspace, your way.',
+      'Work Volt is designed to grow with you. Start with the modules your team needs today — Timesheets, Tasks, Payroll, CRM — and add more as you scale. Every module connects to your Google Sheet, so your data stays in one place you already own and control.': 'Work Volt is designed to grow with you. Start with the modules your team needs today — Timesheets, Tasks, Payroll, CRM — and add more as you scale. Every module connects to your Google Sheet, so your data stays in one place you already own and control.',
+      'No per-seat pricing. No vendor lock-in. Just a clean, powerful workspace that you configure once and your whole team benefits from immediately.': 'No per-seat pricing. No vendor lock-in. Just a clean, powerful workspace that you configure once and your whole team benefits from immediately.',
+      'Browse Module Store': 'Browse Module Store',
+      'Connect Google Sheet': 'Connect Google Sheet',
+      'Installed modules': 'Installed modules',
+      'No modules installed yet': 'No modules installed yet',
+      'Head to the Module Store to add features to your workspace': 'Head to the Module Store to add features to your workspace',
+      'Installed add-ons': 'Installed add-ons',
+      'Tip:': 'Tip:',
+      'This dashboard will update automatically once you connect your Google Sheet — showing live stats, recent activity and team summaries pulled straight from your data.': 'This dashboard will update automatically once you connect your Google Sheet — showing live stats, recent activity and team summaries pulled straight from your data.',
+
+      // ── Dashboard module descriptions ──────────────────────
+      'Manage and track team tasks': 'Manage and track team tasks',
+      'Visualise your sales pipeline': 'Visualise your sales pipeline',
+      'Run payroll and manage compensation': 'Run payroll and manage compensation',
+      'Log and approve work hours': 'Log and approve work hours',
+      'Track revenue, costs and P&L': 'Track revenue, costs and P&L',
+      'Manage clients and relationships': 'Manage clients and relationships',
+      'Plan and deliver projects on time': 'Plan and deliver projects on time',
+      'Insights and analytics across modules': 'Insights and analytics across modules',
+      'Track company equipment and tools': 'Track company equipment and tools',
+      'Track check-ins, absences and hours': 'Track check-ins, absences and hours',
+      'Create and track client invoices': 'Create and track client invoices',
+      'Monitor stock levels and movements': 'Monitor stock levels and movements',
+      'Build and publish shift rosters': 'Build and publish shift rosters',
+      'Submit and approve expense claims': 'Submit and approve expense claims',
+      'Store and manage contracts': 'Store and manage contracts',
+      'Internal support ticket system': 'Internal support ticket system',
+      'Track hiring pipeline and candidates': 'Track hiring pipeline and candidates',
+
+      // ── Settings ──────────────────────────────────────────
+      'Configure your Work Volt workspace': 'Configure your Work Volt workspace',
+      'Connection': 'Connection',
+      'User Management': 'User Management',
+      'Admin Config': 'Admin Config',
+      'Google Sheet Connection': 'Google Sheet Connection',
+      'Connect your GAS Web App to power all modules': 'Connect your GAS Web App to power all modules',
+      'Connected': 'Connected',
+      'Not connected': 'Not connected',
+      'Login': 'Login',
+      'First Setup': 'First Setup',
+      'GAS Web App URL': 'GAS Web App URL',
+      'API Secret': 'API Secret',
+      'Test Connection': 'Test Connection',
+      'How to deploy your GAS backend': 'How to deploy your GAS backend',
+      'Disconnect': 'Disconnect',
+      'Remove the saved URL and secret from this browser': 'Remove the saved URL and secret from this browser',
+      'Users': 'Users',
+      'Add User': 'Add User',
+      'Add User': 'Add User',
+      'Edit User': 'Edit User',
+      'Full Name': 'Full Name',
+      'Email': 'Email',
+      'Role': 'Role',
+      'Department': 'Department',
+      'Job Title': 'Job Title',
+      'Phone': 'Phone',
+      'Pay Type': 'Pay Type',
+      'Hourly Rate': 'Hourly Rate',
+      'Salary': 'Salary',
+      'Start Date': 'Start Date',
+      'Manager': 'Manager',
+      'Avatar URL': 'Avatar URL',
+      'Save Changes': 'Save Changes',
+      'Create User': 'Create User',
+      'Reset Password': 'Reset Password',
+      'New Password': 'New Password',
+      'Confirm Password': 'Confirm Password',
+      'Set Password': 'Set Password',
+      'Delete User': 'Delete User',
+      'Delete Permanently': 'Delete Permanently',
+      'User': 'User',
+      'Status': 'Status',
+      'Actions': 'Actions',
+      'Active': 'Active',
+      'Inactive': 'Inactive',
+      'No users found': 'No users found',
+      'User ID Format': 'User ID Format',
+      'Choose how new User IDs are generated': 'Choose how new User IDs are generated',
+      'ID Format': 'ID Format',
+      'Short, readable ID — default format': 'Short, readable ID — default format',
+      'Legacy universally unique identifier': 'Legacy universally unique identifier',
+      'Save Configuration': 'Save Configuration',
+      'Configuration saved!': 'Configuration saved!',
+      'Modules': 'Modules',
+      'Install or remove modules. Each module creates its own Sheet tab on first install.': 'Install or remove modules. Each module creates its own Sheet tab on first install.',
+      'Refresh': 'Refresh',
+      'Installed': 'Installed',
+      'Available': 'Available',
+      'Roles': 'Roles',
+      'Uninstall': 'Uninstall',
+      'Install': 'Install',
+      'Payroll Tax Settings': 'Payroll Tax Settings',
+      'Auto-calculate taxes on every pay run. Disable if you enter taxes manually.': 'Auto-calculate taxes on every pay run. Disable if you enter taxes manually.',
+      'Enabled': 'Enabled',
+      'Disabled': 'Disabled',
+      'Country / Region': 'Country / Region',
+      'Save Payroll Tax Settings': 'Save Payroll Tax Settings',
+      'Who Can View Tax Settings': 'Who Can View Tax Settings',
+      'Always has access': 'Always has access',
+      'Module Access': 'Module Access',
+      'Connect your Google Sheet first': 'Connect your Google Sheet first',
+      'Go to the Connection tab to set up your GAS URL and secret.': 'Go to the Connection tab to set up your GAS URL and secret.',
+      'Create Admin Accounts': 'Create Admin Accounts',
+      'Set up your Support and Customer admin accounts': 'Set up your Support and Customer admin accounts',
+      'Admin Email': 'Admin Email',
+      'Admin Name': 'Admin Name',
+      'Create Customer Admin': 'Create Customer Admin',
+      'First-time credentials — save these now!': 'First-time credentials — save these now!',
+      'This password is shown': 'This password is shown',
+      'once only': 'once only',
+      '— it is not stored anywhere. Copy it now.': '— it is not stored anywhere. Copy it now.',
+      'Temp password': 'Temp password',
+
+      // ── Roles ─────────────────────────────────────────────
+      'Control which roles can access each module': 'Control which roles can access each module',
+      'Permission Matrix': 'Permission Matrix',
+      'User Overrides': 'User Overrides',
+      'Role Preview': 'Role Preview',
+      'Loading permissions…': 'Loading permissions…',
+      'Has access': 'Has access',
+      'No access': 'No access',
+      'SuperAdmin (always on)': 'SuperAdmin (always on)',
+      'Module': 'Module',
+      'click to toggle all': 'click to toggle all',
+      'All': 'All',
+      'Revoke all': 'Revoke all',
+      'Grant all': 'Grant all',
+      'Core modules are not shown here': 'Core modules are not shown here',
+      '— Dashboard, Settings, Module Store, and Role Permissions have fixed access rules and cannot be changed.': '— Dashboard, Settings, Module Store, and Role Permissions have fixed access rules and cannot be changed.',
+      'SuperAdmin always has access to every module and cannot be unchecked.': 'SuperAdmin always has access to every module and cannot be unchecked.',
+      'No modules installed yet': 'No modules installed yet',
+      'Install modules from the Module Store first, then configure their role permissions here.': 'Install modules from the Module Store first, then configure their role permissions here.',
+      'No Sheet — saves locally': 'No Sheet — saves locally',
+      'Unsaved changes': 'Unsaved changes',
+      'Save Changes': 'Save Changes',
+      'Saving…': 'Saving…',
+      'Google Sheet not connected': 'Google Sheet not connected',
+      'User overrides require a Sheet connection to load the user list.': 'User overrides require a Sheet connection to load the user list.',
+      'Connect Sheet': 'Connect Sheet',
+      'User overrides let you grant or restrict access to specific modules for individual users, overriding their role\'s default permissions. Users without an override follow their role\'s settings.': 'User overrides let you grant or restrict access to specific modules for individual users, overriding their role\'s default permissions. Users without an override follow their role\'s settings.',
+      'No users loaded yet': 'No users loaded yet',
+      'Custom': 'Custom',
+      'Reset to role defaults': 'Reset to role defaults',
+      'Edit': 'Edit',
+      'Override': 'Override',
+      'Module Access': 'Module Access',
+      'This shows exactly what each role will see in their sidebar after saving.': 'This shows exactly what each role will see in their sidebar after saving.',
+      'visible': 'visible',
+      'core': 'core',
+      'No add-on modules': 'No add-on modules',
+      'Access restricted to Admins only': 'Access restricted to Admins only',
+      'Permissions saved locally (connect Sheet to sync globally)': 'Permissions saved locally (connect Sheet to sync globally)',
+      'Permissions saved successfully': 'Permissions saved successfully',
+    },
+
+    fr: {
+      // ── General ───────────────────────────────────────────
+      'Work Volt': 'Work Volt',
+      'Power your operations': 'Optimisez vos opérations',
+      'Work Volt v1.0.0 • Secure Business Management': 'Work Volt v1.0.0 · Gestion d\'entreprise sécurisée',
+      'Work Volt · v1.0.0': 'Work Volt · v1.0.0',
+      'Loading...': 'Chargement...',
+      'Search...': 'Rechercher...',
+      'Save': 'Enregistrer',
+      'Cancel': 'Annuler',
+      'Delete': 'Supprimer',
+      'Edit': 'Modifier',
+      'Close': 'Fermer',
+      'Back': 'Retour',
+      'Logout': 'Déconnexion',
+      'Settings': 'Paramètres',
+      'Dashboard': 'Tableau de bord',
+      'Module Store': 'Boutique de modules',
+      'Role Permissions': 'Permissions des rôles',
+      'Saving…': 'Enregistrement…',
+      'Installing…': 'Installation…',
+      'Deleting…': 'Suppression…',
+      'Testing…': 'Test en cours…',
+      'Fetching…': 'Récupération…',
+
+      // ── Index (Login) ──────────────────────────────────────
+      'Secure Sign In': 'Connexion sécurisée',
+      'Work Volt URL': 'URL Work Volt',
+      'Your Google Apps Script Web App URL': 'Votre URL d\'application Web Google Apps Script',
+      'Username (Email)': 'Identifiant (Email)',
+      'Password': 'Mot de passe',
+      'Sign In': 'Se connecter',
+      'Signing in...': 'Connexion en cours...',
+      'Contact your SuperAdmin to reset your password.': 'Contactez votre SuperAdmin pour réinitialiser votre mot de passe.',
+      'Please enter your Work Volt URL': 'Veuillez entrer votre URL Work Volt',
+      'Please enter your username (email)': 'Veuillez entrer votre identifiant (email)',
+      'Please enter your password': 'Veuillez entrer votre mot de passe',
+
+      // ── Header / Nav ───────────────────────────────────────
+      'Go Back': 'Retour',
+      'Modules': 'Modules',
+      'drag to reorder': 'glisser pour réordonner',
+      'Collapse sidebar': 'Réduire le menu',
+      'Account': 'Compte',
+      'My Profile': 'Mon profil',
+      'Security & Password': 'Sécurité & Mot de passe',
+      'Mimic Profile': 'Imiter un profil',
+
+      // ── User Dropdown ──────────────────────────────────────
+      'Profile modal — coming soon': 'Profil — bientôt disponible',
+      'Security modal — coming soon': 'Sécurité — bientôt disponible',
+
+      // ── Dashboard ─────────────────────────────────────────
+      'Work Volt Dashboard': 'Tableau de bord Work Volt',
+      'Good morning': 'Bonjour',
+      'Good afternoon': 'Bon après-midi',
+      'Good evening': 'Bonsoir',
+      'Welcome to': 'Bienvenue sur',
+      '— your all-in-one operations workspace, built on Google Sheets. Everything here is modular, flexible, and shaped around the way': '— votre espace de travail tout-en-un, basé sur Google Sheets. Tout est modulaire, flexible et adapté à la façon dont',
+      'team actually works.': 'votre équipe travaille réellement.',
+      'Available modules': 'Modules disponibles',
+      'Add-ons installed': 'Extensions installées',
+      'Setup complete': 'Configuration complète',
+      'Get started': 'Commencer',
+      'done': 'fait',
+      'of': 'sur',
+      'Work Volt is running': 'Work Volt est actif',
+      'Your app is live and ready to configure.': 'Votre application est en ligne et prête à être configurée.',
+      'Connect your Google Sheet': 'Connectez votre Google Sheet',
+      'Link your Sheet to power real data across all modules.': 'Liez votre feuille pour alimenter les données de tous les modules.',
+      'Connect Sheet': 'Connecter la feuille',
+      'Install your first module': 'Installez votre premier module',
+      'Visit the Module Store to add features to your sidebar.': 'Visitez la boutique de modules pour ajouter des fonctionnalités.',
+      'Open Store': 'Ouvrir la boutique',
+      'Invite your team': 'Invitez votre équipe',
+      'Add users, assign roles and get everyone working.': 'Ajoutez des utilisateurs, attribuez des rôles et mettez tout le monde au travail.',
+      'Manage Users': 'Gérer les utilisateurs',
+      'Your workspace, your way.': 'Votre espace, à votre façon.',
+      'Work Volt is designed to grow with you. Start with the modules your team needs today — Timesheets, Tasks, Payroll, CRM — and add more as you scale. Every module connects to your Google Sheet, so your data stays in one place you already own and control.': 'Work Volt est conçu pour évoluer avec vous. Commencez avec les modules dont votre équipe a besoin — Feuilles de temps, Tâches, Paie, CRM — et ajoutez-en d\'autres au fil de votre croissance. Chaque module se connecte à votre Google Sheet pour que vos données restent en un seul endroit.',
+      'No per-seat pricing. No vendor lock-in. Just a clean, powerful workspace that you configure once and your whole team benefits from immediately.': 'Aucun coût par utilisateur. Aucun enfermement propriétaire. Un espace de travail puissant que vous configurez une fois et dont toute votre équipe profite immédiatement.',
+      'Browse Module Store': 'Parcourir la boutique',
+      'Connect Google Sheet': 'Connecter Google Sheet',
+      'Installed modules': 'Modules installés',
+      'No modules installed yet': 'Aucun module installé',
+      'Head to the Module Store to add features to your workspace': 'Rendez-vous à la boutique de modules pour ajouter des fonctionnalités',
+      'Installed add-ons': 'Extensions installées',
+      'Tip:': 'Conseil :',
+      'This dashboard will update automatically once you connect your Google Sheet — showing live stats, recent activity and team summaries pulled straight from your data.': 'Ce tableau de bord se mettra à jour automatiquement une fois votre Google Sheet connecté — affichant des statistiques en direct, l\'activité récente et les résumés d\'équipe tirés directement de vos données.',
+
+      // ── Dashboard module descriptions ──────────────────────
+      'Manage and track team tasks': 'Gérer et suivre les tâches de l\'équipe',
+      'Visualise your sales pipeline': 'Visualisez votre pipeline de ventes',
+      'Run payroll and manage compensation': 'Gérer la paie et les rémunérations',
+      'Log and approve work hours': 'Saisir et approuver les heures de travail',
+      'Track revenue, costs and P&L': 'Suivre les revenus, coûts et résultats',
+      'Manage clients and relationships': 'Gérer les clients et les relations',
+      'Plan and deliver projects on time': 'Planifier et livrer les projets dans les délais',
+      'Insights and analytics across modules': 'Analyses et rapports sur tous les modules',
+      'Track company equipment and tools': 'Suivre le matériel et les outils de l\'entreprise',
+      'Track check-ins, absences and hours': 'Suivre les présences, absences et heures',
+      'Create and track client invoices': 'Créer et suivre les factures clients',
+      'Monitor stock levels and movements': 'Surveiller les niveaux de stock et mouvements',
+      'Build and publish shift rosters': 'Créer et publier les plannings de quarts',
+      'Submit and approve expense claims': 'Soumettre et approuver les notes de frais',
+      'Store and manage contracts': 'Stocker et gérer les contrats',
+      'Internal support ticket system': 'Système de tickets d\'assistance interne',
+      'Track hiring pipeline and candidates': 'Suivre le pipeline de recrutement et les candidats',
+
+      // ── Settings ──────────────────────────────────────────
+      'Configure your Work Volt workspace': 'Configurez votre espace Work Volt',
+      'Connection': 'Connexion',
+      'User Management': 'Gestion des utilisateurs',
+      'Admin Config': 'Config. Admin',
+      'Google Sheet Connection': 'Connexion Google Sheet',
+      'Connect your GAS Web App to power all modules': 'Connectez votre application GAS pour alimenter tous les modules',
+      'Connected': 'Connecté',
+      'Not connected': 'Non connecté',
+      'Login': 'Connexion',
+      'First Setup': 'Première configuration',
+      'GAS Web App URL': 'URL de l\'application GAS',
+      'API Secret': 'Clé API secrète',
+      'Test Connection': 'Tester la connexion',
+      'How to deploy your GAS backend': 'Comment déployer votre backend GAS',
+      'Disconnect': 'Déconnecter',
+      'Remove the saved URL and secret from this browser': 'Supprimer l\'URL et la clé secrète enregistrées de ce navigateur',
+      'Users': 'Utilisateurs',
+      'Add User': 'Ajouter un utilisateur',
+      'Edit User': 'Modifier l\'utilisateur',
+      'Full Name': 'Nom complet',
+      'Email': 'E-mail',
+      'Role': 'Rôle',
+      'Department': 'Département',
+      'Job Title': 'Poste',
+      'Phone': 'Téléphone',
+      'Pay Type': 'Type de rémunération',
+      'Hourly Rate': 'Taux horaire',
+      'Salary': 'Salaire',
+      'Start Date': 'Date de début',
+      'Manager': 'Responsable',
+      'Avatar URL': 'URL de l\'avatar',
+      'Save Changes': 'Enregistrer les modifications',
+      'Create User': 'Créer l\'utilisateur',
+      'Reset Password': 'Réinitialiser le mot de passe',
+      'New Password': 'Nouveau mot de passe',
+      'Confirm Password': 'Confirmer le mot de passe',
+      'Set Password': 'Définir le mot de passe',
+      'Delete User': 'Supprimer l\'utilisateur',
+      'Delete Permanently': 'Supprimer définitivement',
+      'User': 'Utilisateur',
+      'Status': 'Statut',
+      'Actions': 'Actions',
+      'Active': 'Actif',
+      'Inactive': 'Inactif',
+      'No users found': 'Aucun utilisateur trouvé',
+      'User ID Format': 'Format de l\'ID utilisateur',
+      'Choose how new User IDs are generated': 'Choisissez comment les nouveaux IDs utilisateur sont générés',
+      'ID Format': 'Format ID',
+      'Short, readable ID — default format': 'ID court et lisible — format par défaut',
+      'Legacy universally unique identifier': 'Identifiant universel unique (héritage)',
+      'Save Configuration': 'Enregistrer la configuration',
+      'Configuration saved!': 'Configuration enregistrée !',
+      'Modules': 'Modules',
+      'Install or remove modules. Each module creates its own Sheet tab on first install.': 'Installez ou supprimez des modules. Chaque module crée son propre onglet lors de l\'installation.',
+      'Refresh': 'Actualiser',
+      'Installed': 'Installés',
+      'Available': 'Disponibles',
+      'Roles': 'Rôles',
+      'Uninstall': 'Désinstaller',
+      'Install': 'Installer',
+      'Payroll Tax Settings': 'Paramètres fiscaux de la paie',
+      'Auto-calculate taxes on every pay run. Disable if you enter taxes manually.': 'Calcul automatique des taxes à chaque traitement de paie. Désactivez si vous saisissez les taxes manuellement.',
+      'Enabled': 'Activé',
+      'Disabled': 'Désactivé',
+      'Country / Region': 'Pays / Région',
+      'Save Payroll Tax Settings': 'Enregistrer les paramètres fiscaux',
+      'Who Can View Tax Settings': 'Qui peut voir les paramètres fiscaux',
+      'Always has access': 'Accès permanent',
+      'Module Access': 'Accès aux modules',
+      'Connect your Google Sheet first': 'Connectez d\'abord votre Google Sheet',
+      'Go to the Connection tab to set up your GAS URL and secret.': 'Accédez à l\'onglet Connexion pour configurer votre URL GAS et votre clé secrète.',
+      'Create Admin Accounts': 'Créer des comptes administrateurs',
+      'Set up your Support and Customer admin accounts': 'Configurez vos comptes administrateurs support et client',
+      'Admin Email': 'E-mail administrateur',
+      'Admin Name': 'Nom de l\'administrateur',
+      'Create Customer Admin': 'Créer l\'administrateur client',
+      'First-time credentials — save these now!': 'Identifiants initiaux — sauvegardez-les maintenant !',
+      'This password is shown': 'Ce mot de passe est affiché',
+      'once only': 'une seule fois',
+      '— it is not stored anywhere. Copy it now.': '— il n\'est stocké nulle part. Copiez-le maintenant.',
+      'Temp password': 'Mot de passe temporaire',
+
+      // ── Roles ─────────────────────────────────────────────
+      'Control which roles can access each module': 'Contrôlez quels rôles peuvent accéder à chaque module',
+      'Permission Matrix': 'Matrice des permissions',
+      'User Overrides': 'Exceptions utilisateurs',
+      'Role Preview': 'Aperçu des rôles',
+      'Loading permissions…': 'Chargement des permissions…',
+      'Has access': 'A accès',
+      'No access': 'Pas d\'accès',
+      'SuperAdmin (always on)': 'SuperAdmin (toujours activé)',
+      'Module': 'Module',
+      'click to toggle all': 'cliquer pour tout basculer',
+      'All': 'Tous',
+      'Revoke all': 'Tout révoquer',
+      'Grant all': 'Tout accorder',
+      'Core modules are not shown here': 'Les modules principaux ne sont pas affichés ici',
+      '— Dashboard, Settings, Module Store, and Role Permissions have fixed access rules and cannot be changed.': '— Tableau de bord, Paramètres, Boutique et Permissions ont des règles fixes et ne peuvent pas être modifiés.',
+      'SuperAdmin always has access to every module and cannot be unchecked.': 'Le SuperAdmin a toujours accès à tous les modules et ne peut pas être désactivé.',
+      'Install modules from the Module Store first, then configure their role permissions here.': 'Installez d\'abord des modules depuis la boutique, puis configurez leurs permissions ici.',
+      'No Sheet — saves locally': 'Sans feuille — sauvegarde locale',
+      'Unsaved changes': 'Modifications non enregistrées',
+      'Google Sheet not connected': 'Google Sheet non connecté',
+      'User overrides require a Sheet connection to load the user list.': 'Les exceptions utilisateurs nécessitent une connexion à la feuille pour charger la liste.',
+      'Connect Sheet': 'Connecter la feuille',
+      'User overrides let you grant or restrict access to specific modules for individual users, overriding their role\'s default permissions. Users without an override follow their role\'s settings.': 'Les exceptions permettent d\'accorder ou de restreindre l\'accès à des modules spécifiques pour des utilisateurs individuels. Les utilisateurs sans exception suivent les paramètres de leur rôle.',
+      'No users loaded yet': 'Aucun utilisateur chargé',
+      'Custom': 'Personnalisé',
+      'Reset to role defaults': 'Réinitialiser aux valeurs du rôle',
+      'Override': 'Personnaliser',
+      'This shows exactly what each role will see in their sidebar after saving.': 'Ceci montre exactement ce que chaque rôle verra dans son menu après l\'enregistrement.',
+      'visible': 'visible',
+      'core': 'principal',
+      'No add-on modules': 'Aucun module complémentaire',
+      'Access restricted to Admins only': 'Accès réservé aux administrateurs',
+      'Permissions saved locally (connect Sheet to sync globally)': 'Permissions sauvegardées localement (connectez la feuille pour synchroniser)',
+      'Permissions saved successfully': 'Permissions enregistrées avec succès',
+
+      // ── Module catalogue labels (used in store/sidebar) ────
+      'Notifications': 'Notifications',
+      'Tasks': 'Tâches',
+      'Pipeline': 'Pipeline',
+      'Payroll': 'Paie',
+      'Timesheets': 'Feuilles de temps',
+      'Financials': 'Finances',
+      'CRM': 'CRM',
+      'Projects': 'Projets',
+      'Reports': 'Rapports',
+      'Assets': 'Actifs',
+      'Attendance Tracker': 'Suivi des présences',
+      'Invoice Manager': 'Gestionnaire de factures',
+      'Inventory Control': 'Gestion des stocks',
+      'Shift Scheduler': 'Planificateur de quarts',
+      'Expense Claims': 'Notes de frais',
+      'Contract Hub': 'Gestion des contrats',
+      'Help Desk': 'Centre d\'assistance',
+      'Recruitment Pipeline': 'Pipeline de recrutement',
+
+      // ── Module descriptions (store tab) ────────────────────
+      'Full notification center with smart grouping, priority levels, bell alerts, popup toasts, persistent banners, and quiet hours.': 'Centre de notifications complet avec groupement intelligent, niveaux de priorité, alertes, toasts et heures silencieuses.',
+      'Create, assign and track tasks with priority, billing and pay-per-task support.': 'Créez, assignez et suivez des tâches avec priorité, facturation et rémunération à la tâche.',
+      'Visual sales pipeline to manage leads and deals through custom stages.': 'Pipeline de ventes visuel pour gérer les prospects et les affaires par étapes personnalisées.',
+      'Run payroll for hourly, salaried and pay-per-task employees.': 'Gérez la paie pour les employés à l\'heure, salariés ou rémunérés à la tâche.',
+      'Log and approve work hours with project and task tracking.': 'Enregistrez et approuvez les heures de travail avec suivi des projets et tâches.',
+      'Track income, expenses and financial KPIs in one place.': 'Suivez les revenus, dépenses et KPI financiers en un seul endroit.',
+      'Manage contacts, companies and customer relationships.': 'Gérez les contacts, entreprises et relations clients.',
+      'Organise work into projects with milestones and team assignments.': 'Organisez le travail en projets avec jalons et affectations d\'équipe.',
+      'Auto-generated reports across all installed modules.': 'Rapports générés automatiquement pour tous les modules installés.',
+      'Track company assets, assignments and maintenance schedules.': 'Suivez les actifs de l\'entreprise, les affectations et les calendriers de maintenance.',
+      'Monitor employee check-ins, absences and leave requests.': 'Surveillez les entrées/sorties, absences et demandes de congé des employés.',
+      'Create and send professional invoices, track payment status.': 'Créez et envoyez des factures professionnelles, suivez les paiements.',
+      'Manage stock levels, SKUs, suppliers and reorder points.': 'Gérez les niveaux de stock, SKU, fournisseurs et points de commande.',
+      'Build and publish shift schedules for your team.': 'Créez et publiez les plannings de quarts pour votre équipe.',
+      'Submit, review and reimburse employee expense claims.': 'Soumettez, examinez et remboursez les notes de frais des employés.',
+      'Store and manage contracts with expiry reminders.': 'Stockez et gérez les contrats avec rappels d\'expiration.',
+      'Internal ticket system for employee IT and HR requests.': 'Système de tickets interne pour les demandes informatiques et RH.',
+      'Track candidates through your hiring pipeline.': 'Suivez les candidats dans votre pipeline de recrutement.',
+
+      // ── Toast/error messages ───────────────────────────────
+      'Please enter the GAS URL': 'Veuillez entrer l\'URL GAS',
+      'Please enter the API Secret for first-time setup': 'Veuillez entrer la clé API secrète pour la configuration initiale',
+      'Settings saved. Testing connection…': 'Paramètres enregistrés. Test de la connexion…',
+      'Email is required.': 'L\'e-mail est requis.',
+      'Role is required.': 'Le rôle est requis.',
+      'Password is required.': 'Le mot de passe est requis.',
+      'User updated successfully.': 'Utilisateur mis à jour avec succès.',
+      'User created successfully.': 'Utilisateur créé avec succès.',
+      'Please enter a new password.': 'Veuillez entrer un nouveau mot de passe.',
+      'Passwords do not match.': 'Les mots de passe ne correspondent pas.',
+      'Password updated successfully.': 'Mot de passe mis à jour avec succès.',
+      'Please fill in all fields': 'Veuillez remplir tous les champs',
+    },
+  };
+
+  // ── Core i18n API ─────────────────────────────────────────────────
+
+  let _currentLang = localStorage.getItem(LANG_KEY) || 'en';
+
+  function getLang() { return _currentLang; }
+
+  function setLang(lang) {
+    if (!TRANSLATIONS[lang]) return;
+    _currentLang = lang;
+    localStorage.setItem(LANG_KEY, lang);
+    // Fire an event so pages can re-render
+    document.dispatchEvent(new CustomEvent('wv:langchange', { detail: { lang } }));
+    // Re-render nav if available
+    if (typeof window.renderNav === 'function') window.renderNav();
+    // Re-render current page module
+    const main = document.getElementById('main-content');
+    const lastModule = sessionStorage.getItem('lastModule') || 'dashboard';
+    if (main && typeof window.WorkVolt !== 'undefined') {
+      window.WorkVolt.navigate(lastModule);
+    }
+  }
+
+  function t(key) {
+    const dict = TRANSLATIONS[_currentLang] || TRANSLATIONS.en;
+    return dict[key] !== undefined ? dict[key] : (TRANSLATIONS.en[key] !== undefined ? TRANSLATIONS.en[key] : key);
+  }
+
+  // ── Language toggle button HTML ───────────────────────────────────
+  function langToggleHTML() {
+    const isEN = _currentLang === 'en';
+    return `
+      <button
+        onclick="window.WVI18n.setLang('${isEN ? 'fr' : 'en'}')"
+        title="${isEN ? 'Switch to French' : 'Passer en anglais'}"
+        style="display:flex;align-items:center;gap:6px;padding:5px 10px;background:#f1f5f9;border:1.5px solid #e2e8f0;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;color:#475569;font-family:inherit;transition:all 0.15s;white-space:nowrap;"
+        onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'"
+      >
+        ${isEN
+          ? `<span style="font-size:15px">🇺🇸</span> EN`
+          : `<span style="font-size:15px">🇫🇷</span> FR`
+        }
+      </button>`;
+  }
+
+  // ── Apply to Login page (index.html) ─────────────────────────────
+  function applyToLoginPage() {
+    // Run after DOM is ready
+    function apply() {
+      // subtitle
+      const sub = document.querySelector('p.text-blue-200');
+      if (sub) sub.textContent = t('Power your operations');
+
+      // Secure Sign In badge
+      const badge = document.querySelector('.fas.fa-shield-alt + span');
+      if (badge) badge.textContent = t('Secure Sign In');
+
+      // Labels
+      document.querySelectorAll('label').forEach(el => {
+        const txt = el.textContent.trim();
+        const tr = t(txt);
+        if (tr !== txt) el.textContent = tr;
+      });
+
+      // Placeholders
+      const gasInput = document.getElementById('gas-url');
+      if (gasInput) gasInput.placeholder = 'https://script.google.com/macros/s/.../exec';
+
+      const usernameInput = document.getElementById('username');
+      if (usernameInput) usernameInput.placeholder = 'admin@workvolt.app';
+
+      const gasHelper = document.querySelector('#gas-url + p');
+      if (gasHelper) gasHelper.textContent = t('Your Google Apps Script Web App URL');
+
+      // Button
+      const loginBtn = document.getElementById('login-btn');
+      if (loginBtn) {
+        const span = loginBtn.querySelector('span');
+        if (span) span.textContent = t('Sign In');
+      }
+
+      // Footer
+      const footer = document.querySelector('p.text-center.text-blue-200\\/60');
+      if (footer) footer.textContent = t('Work Volt v1.0.0 • Secure Business Management');
+
+      // Inject lang toggle
+      injectLoginLangToggle();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else {
+      apply();
+    }
+
+    document.addEventListener('wv:langchange', apply);
+  }
+
+  function injectLoginLangToggle() {
+    let btn = document.getElementById('wv-lang-toggle');
+    if (!btn) {
+      btn = document.createElement('div');
+      btn.id = 'wv-lang-toggle';
+      btn.style.cssText = 'position:fixed;top:12px;right:12px;z-index:999';
+      document.body.appendChild(btn);
+    }
+    btn.innerHTML = langToggleHTML();
+  }
+
+  // ── Inject toggle into main app header ───────────────────────────
+  function injectMainLangToggle() {
+    let existing = document.getElementById('wv-lang-toggle');
+    if (existing) { existing.innerHTML = langToggleHTML(); return; }
+    existing = document.createElement('div');
+    existing.id = 'wv-lang-toggle';
+    existing.innerHTML = langToggleHTML();
+    // Insert before user-menu-container
+    const userMenu = document.getElementById('user-menu-container');
+    if (userMenu) {
+      userMenu.parentNode.insertBefore(existing, userMenu);
+    }
+  }
+
+  // ── Expose globally ───────────────────────────────────────────────
+  window.WVI18n = { t, getLang, setLang, langToggleHTML, injectMainLangToggle, injectLoginLangToggle, applyToLoginPage };
+  window.t = t; // shorthand
+
+})();
+
+</script>
+
+  <style>
+    /* ─── Base ─── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; }
+
+    /* ─── Transitions ─── */
+    .fade-in  { animation: fadeIn 0.25s ease both; }
+    .slide-up { animation: slideUp 0.3s cubic-bezier(.16,1,.3,1) both; }
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ─── Splash ─── */
+    #splash-screen { transition: opacity 0.4s ease, visibility 0.4s ease; }
+    #splash-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .bolt-pulse { animation: boltPulse 2s ease-in-out infinite; }
+    @keyframes boltPulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.08);opacity:.85} }
+
+    /* ─── Nav item active ─── */
+    .nav-item { transition: background 0.15s, color 0.15s; }
+    .nav-item.active { background: #eff6ff; color: #1d4ed8; font-weight: 600; }
+    .nav-item.active i { color: #2563eb; }
+
+    /* ─── Card hover ─── */
+    .card-hover { transition: transform 0.18s, box-shadow 0.18s; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 28px -6px rgba(0,0,0,.12); }
+
+    /* ─── Input focus ring ─── */
+    .field { width:100%; padding:.6rem .875rem; border:1.5px solid #e2e8f0; border-radius:10px; font-size:.875rem; outline:none; transition:border-color .15s, box-shadow .15s; font-family:inherit; }
+    .field:focus { border-color:#3b82f6; box-shadow:0 0 0 3px rgba(59,130,246,.15); }
+
+    /* ─── Btn primary ─── */
+    .btn-primary { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.65rem 1.25rem; background:#2563eb; color:#fff; border:none; border-radius:10px; font-size:.875rem; font-weight:600; cursor:pointer; transition:background .15s, transform .1s; font-family:inherit; }
+    .btn-primary:hover { background:#1d4ed8; }
+    .btn-primary:active { transform:scale(.98); }
+    .btn-primary:disabled { opacity:.6; cursor:not-allowed; }
+
+    /* ─── Btn secondary ─── */
+    .btn-secondary { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.65rem 1.25rem; background:#f1f5f9; color:#475569; border:none; border-radius:10px; font-size:.875rem; font-weight:600; cursor:pointer; transition:background .15s; font-family:inherit; }
+    .btn-secondary:hover { background:#e2e8f0; }
+
+    /* ─── Toast ─── */
+    #toast-container { position:fixed; bottom:1.5rem; right:1.5rem; z-index:9999; display:flex; flex-direction:column; gap:.5rem; pointer-events:none; }
+    .toast { display:flex; align-items:center; gap:.75rem; padding:.75rem 1.1rem; border-radius:12px; font-size:.875rem; font-weight:500; color:#fff; box-shadow:0 8px 24px rgba(0,0,0,.18); animation:toastIn .3s cubic-bezier(.16,1,.3,1); pointer-events:auto; max-width:360px; }
+    .toast.success { background:#16a34a; }
+    .toast.error   { background:#dc2626; }
+    .toast.info    { background:#2563eb; }
+    @keyframes toastIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes toastOut { from{opacity:1} to{opacity:0;transform:translateY(12px)} }
+
+    /* ─── Scrollbar thin ─── */
+    .thin-scroll::-webkit-scrollbar { width:4px; }
+    .thin-scroll::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:4px; }
+
+    /* ─── Mobile sidebar overlay ─── */
+    #sidebar-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:40; }
+    #sidebar-overlay.visible { display:block; }
+
+    /* ─── Collapsible sidebar (desktop) ─── */
+    #sidebar { transition: width .22s cubic-bezier(.4,0,.2,1); }
+    #sidebar.collapsed { width: 56px !important; }
+    #sidebar.collapsed .nav-label,
+    #sidebar.collapsed .nav-section-label,
+    #sidebar.collapsed .sidebar-footer-text,
+    #sidebar.collapsed .drag-hint { display: none !important; }
+    #sidebar.collapsed .nav-item { justify-content: center; padding-left: 0; padding-right: 0; }
+
+    /* ─── Responsive mobile tweaks ─── */
+    @media (max-width: 768px) {
+      #sidebar { position:fixed; top:0; left:0; height:100vh; z-index:50; transform:translateX(-100%); transition:transform .25s ease; }
+      #sidebar.open { transform:translateX(0); }
+    }
+  </style>
+<base target="_blank">
+</head>
+
+<body class="min-h-screen">
+
+  <!-- ══════════════════════════════════════════
+       SPLASH SCREEN
+  ══════════════════════════════════════════ -->
+  <div id="splash-screen" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
+    <div class="flex flex-col items-center gap-8">
+      <div class="relative">
+        <div class="absolute inset-0 bg-white/20 rounded-3xl blur-xl scale-110"></div>
+        <div class="relative inline-flex items-center justify-center w-24 h-24 bg-white/15 border border-white/30 rounded-3xl shadow-2xl backdrop-blur-sm bolt-pulse">
+          <i class="fas fa-bolt text-white text-5xl"></i>
+        </div>
+      </div>
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-white tracking-tight">Work Volt</h1>
+        <p class="text-blue-200 mt-1.5 text-base font-medium">Power your operations</p>
+      </div>
+      <div class="flex gap-2 mt-1">
+        <div class="w-2 h-2 bg-white/70 rounded-full animate-bounce" style="animation-delay:0ms"></div>
+        <div class="w-2 h-2 bg-white/70 rounded-full animate-bounce" style="animation-delay:150ms"></div>
+        <div class="w-2 h-2 bg-white/70 rounded-full animate-bounce" style="animation-delay:300ms"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       MAIN APP SCREEN
+  ══════════════════════════════════════════ -->
+  <div id="app-screen" class="hidden flex flex-col min-h-screen">
+
+    <!-- Top Header -->
+    <header class="bg-white border-b border-slate-200 px-4 h-14 flex items-center gap-3 sticky top-0 z-30 flex-shrink-0">
+
+      <!-- Mobile hamburger + logo -->
+      <button id="mobile-menu-btn" onclick="toggleMobileSidebar()" class="lg:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors">
+        <i class="fas fa-bars text-slate-600"></i>
+      </button>
+
+      <!-- Back button (shown contextually) -->
+      <button id="app-back-btn" onclick="appGoBack()" class="hidden p-2 hover:bg-slate-100 rounded-lg transition-colors" title="Go Back">
+        <i class="fas fa-arrow-left text-slate-600"></i>
+      </button>
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2 cursor-pointer" onclick="showModule('dashboard')">
+        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-sm">
+          <i class="fas fa-bolt text-white text-sm"></i>
+        </div>
+        <span class="text-lg font-extrabold text-slate-900 tracking-tight">Work Volt</span>
+      </div>
+
+      <!-- Search (desktop) -->
+      <div class="flex-1 max-w-sm mx-4 hidden md:block">
+        <div class="relative">
+          <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+          <input type="text" id="global-search" placeholder="Search..." class="w-full pl-9 pr-4 py-2 bg-slate-100 border border-transparent rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all" data-i18n-placeholder="Search...">
+        </div>
+      </div>
+
+        <!-- Notifications Bell -->
+        <div id="header-notif-bell" class="hidden relative">
+          <button onclick="showModule('notifications')" class="p-2 hover:bg-slate-100 rounded-lg transition-colors relative">
+            <i class="fas fa-bell text-slate-600"></i>
+            <span id="header-notif-badge" class="hidden absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          </button>
+        </div>
+
+      <div class="ml-auto flex items-center gap-1">
+
+        <!-- User menu -->
+        <div class="relative" id="user-menu-container">
+          <button onclick="toggleUserMenu(event)" class="flex items-center gap-2 pl-3 border-l border-slate-200 hover:bg-slate-100 rounded-lg p-2 transition-colors ml-1">
+            <div id="user-avatar" class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">JD</div>
+            <span id="user-name" class="hidden md:block text-sm font-semibold text-slate-700">John Doe</span>
+            <i class="fas fa-chevron-down text-xs text-slate-400"></i>
+          </button>
+
+          <div id="user-dropdown" class="hidden absolute right-0 mt-2 w-60 bg-white rounded-xl shadow-xl border border-slate-200 z-50 overflow-hidden">
+            <div id="user-dropdown-inner"></div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Body: Sidebar + Main -->
+    <div class="flex flex-1 overflow-hidden">
+
+      <!-- Mobile sidebar overlay -->
+      <div id="sidebar-overlay" onclick="closeMobileSidebar()"></div>
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="w-64 bg-white border-r border-slate-200 flex-shrink-0 flex flex-col lg:translate-x-0">
+        <nav class="flex-1 overflow-y-auto thin-scroll p-3 space-y-0.5" id="nav-menu">
+          <!-- Populated by renderNav() -->
+        </nav>
+        <div class="p-3 border-t border-slate-100 flex items-center justify-between">
+          <p class="text-[10px] text-slate-400 font-medium sidebar-footer-text">Work Volt · v1.0.0</p>
+          <button onclick="toggleSidebarCollapse()" title="Collapse sidebar"
+            class="sidebar-collapse-btn w-7 h-7 rounded-lg hover:bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-all flex-shrink-0">
+            <i class="fas fa-chevron-left text-xs" style="transition:transform .22s"></i>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main content area — pages load here -->
+      <main class="flex-1 overflow-y-auto bg-slate-50" id="main-content">
+        <!-- Page modules injected here -->
+      </main>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       GLOBAL MODALS MOUNT POINT
+  ══════════════════════════════════════════ -->
+  <div id="modals-root"></div>
+
+
+  <!-- ══════════════════════════════════════════
+       TOAST NOTIFICATIONS
+  ══════════════════════════════════════════ -->
+  <div id="toast-container"></div>
+
+
+  <!-- ══════════════════════════════════════════
+       GLOBAL LOADING OVERLAY
+  ══════════════════════════════════════════ -->
+  <div id="global-loading" class="hidden fixed inset-0 bg-white/70 z-50 flex items-center justify-center backdrop-blur-sm">
+    <div class="flex flex-col items-center gap-3">
+      <i class="fas fa-circle-notch fa-spin text-3xl text-blue-600"></i>
+      <p class="text-slate-600 text-sm font-medium" data-i18n="Loading...">Loading...</p>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       CORE JAVASCRIPT
+  ══════════════════════════════════════════ -->
+  <script>
+  // ─────────────────────────────────────────────
+  //  CONFIG & STATE
+  // ─────────────────────────────────────────────
+  let API_URL         = '';
+  let SHEET_ID        = '';
+  let currentUser     = null;
+  let currentSession  = null;
+  let _setupData      = {};
+
+  // Module → allowed roles
+  const MODULE_ROLES = {
+    dashboard:  ['SuperAdmin','Admin','Manager','Employee','Contractor'],
+    settings:   ['SuperAdmin','Admin'],
+    store:      ['SuperAdmin','Admin'],
+    roles:      ['SuperAdmin','Admin'],
+  };
+
+  const MODULE_ICONS = {
+    dashboard:  'fa-th-large',
+    settings:   'fa-cog',
+    store:      'fa-store',
+    roles:      'fa-shield-alt',
+  };
+
+  const MODULE_LABELS = {
+    dashboard:  'Dashboard',
+    settings:   'Settings',
+    store:      'Module Store',
+    roles:      'Role Permissions',
+  };
+
+  let _rolePermissions   = {};
+  let _userModuleOverrides = {};
+
+  async function loadRolePermissions() {
+    const savedUrl = sessionStorage.getItem('wv_gas_url') || '';
+    const API_TOKEN = 'wv_4f8a2e1b9c7d3f6a0e5b8c2d4f7a1e3b'; // <--- API secret here
+    
+    if (!savedUrl || !currentSession) return;
+
+    try {
+      const url = new URL(savedUrl);
+      url.searchParams.set('path', 'config/get-all');
+      url.searchParams.set('token', API_TOKEN);
+      url.searchParams.set('session_id', currentSession);
+      
+      console.log('Fetching config from:', url.toString().replace(API_TOKEN, '***'));
+      
+      const res = await fetch(url.toString(), { cache: 'no-cache' });
+      const text = await res.text();
+      console.log('Config response:', text.substring(0, 200));
+      
+      const data = JSON.parse(text);
+      const settings = data.settings || {};
+      if (settings.role_permissions) {
+        try { _rolePermissions = JSON.parse(settings.role_permissions); } catch(e) {}
+      }
+      if (settings.user_module_overrides) {
+        try { _userModuleOverrides = JSON.parse(settings.user_module_overrides); } catch(e) {}
+      }
+    } catch(e) {
+      console.warn('Could not load role permissions:', e.message);
+    }
+  }
+
+  function resolvedRolesForModule(moduleId) {
+    if (_rolePermissions[moduleId]) {
+      return Object.entries(_rolePermissions[moduleId])
+        .filter(([, allowed]) => allowed)
+        .map(([role]) => role);
+    }
+    const def = ADDON_CATALOGUE[moduleId];
+    return (def && def.roles) || [];
+  }
+
+  function canAccessModule(moduleId) {
+    const role = currentUser?.role || 'Employee';
+    const userId = currentUser?.user_id || '';
+
+    if (moduleId === 'dashboard') return true;
+    if (MODULE_ROLES[moduleId]) return MODULE_ROLES[moduleId].includes(role);
+    if (role === 'SuperAdmin') return true;
+    if (_userModuleOverrides[userId]) {
+      return _userModuleOverrides[userId].includes(moduleId);
+    }
+    return resolvedRolesForModule(moduleId).includes(role);
+  }
+
+  const ADDON_CATALOGUE = {
+    notifications: { label: 'Notifications', icon: 'fa-bell', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    tasks:       { label: 'Tasks', icon: 'fa-check-circle', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    pipeline:    { label: 'Pipeline', icon: 'fa-users', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    payroll:     { label: 'Payroll', icon: 'fa-money-bill-wave', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    timesheets:  { label: 'Timesheets', icon: 'fa-clock', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    financials:  { label: 'Financials', icon: 'fa-chart-line', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    crm:         { label: 'CRM', icon: 'fa-address-book', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    projects:    { label: 'Projects', icon: 'fa-folder-open', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    reports:     { label: 'Reports', icon: 'fa-chart-pie', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    assets:      { label: 'Assets', icon: 'fa-box-open', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    attendance:  { label: 'Attendance Tracker', icon: 'fa-calendar-check', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    invoices:    { label: 'Invoice Manager', icon: 'fa-file-invoice-dollar', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    inventory:   { label: 'Inventory Control', icon: 'fa-warehouse', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    scheduler:   { label: 'Shift Scheduler', icon: 'fa-calendar-alt', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    expenses:    { label: 'Expense Claims', icon: 'fa-receipt', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    contracts:   { label: 'Contract Hub', icon: 'fa-file-signature', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    helpdesk:    { label: 'Help Desk', icon: 'fa-headset', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+    recruitment: { label: 'Recruitment Pipeline', icon: 'fa-user-tie', roles: ['SuperAdmin','Admin','Manager','Employee','Contractor'] },
+  };
+
+  let INSTALLED_MODULES = [];
+  window.INSTALLED_MODULES = INSTALLED_MODULES;
+
+  function saveInstalledModules() {
+    try {
+      localStorage.setItem('wv_installed_modules', JSON.stringify(INSTALLED_MODULES));
+    } catch(e) {
+      console.warn('Could not save modules to localStorage:', e.message);
+    }
+  }
+
+  async function loadInstalledModules() {
+    const savedUrl = sessionStorage.getItem('wv_gas_url') || '';
+    const API_TOKEN = 'wv_4f8a2e1b9c7d3f6a0e5b8c2d4f7a1e3b'; // <--- API secret here
+    
+    if (savedUrl) { API_URL = savedUrl; window.API_URL = savedUrl; }
+
+    if (savedUrl && currentSession) {
+      try {
+        const url = new URL(savedUrl);
+        url.searchParams.set('path', 'config/modules');
+        url.searchParams.set('token', API_TOKEN);
+        url.searchParams.set('session_id', currentSession);
+        
+        console.log('Fetching modules from:', url.toString().replace(API_TOKEN, '***'));
+        
+        const res = await fetch(url.toString(), { cache: 'no-cache' });
+        const text = await res.text();
+        console.log('Modules response:', text.substring(0, 200));
+        
+        const data = JSON.parse(text);
+        if (data.modules) {
+          INSTALLED_MODULES = data.modules;
+          window.INSTALLED_MODULES = INSTALLED_MODULES;
+        } else if (data.error) {
+          console.error('Modules API error:', data.error);
+        }
+      } catch(e) {
+        console.warn('Could not load modules from Sheet:', e.message);
+      }
+    }
+  }
+
+  // ─────────────────────────────────────────────
+  //  API HELPER - WITH token
+  // ─────────────────────────────────────────────
+  async function apiCall(path, params = {}, retries = 2) {
+    const savedUrl = sessionStorage.getItem('wv_gas_url') || API_URL;
+    const API_TOKEN = 'wv_4f8a2e1b9c7d3f6a0e5b8c2d4f7a1e3b';  // <--- API secret here
+    
+    const url = new URL(savedUrl);
+    url.searchParams.set('path', path);
+    url.searchParams.set('token', API_TOKEN);
+    url.searchParams.set('_t', Date.now().toString());
+    if (currentSession) url.searchParams.set('session_id', currentSession);
+    for (const k in params) {
+      if (params[k] !== undefined && params[k] !== null)
+        url.searchParams.set(k, params[k]);
+    }
+
+    console.log('API call:', path, url.toString().replace(API_TOKEN, '***'));
+
+    let lastErr;
+    for (let i = 0; i <= retries; i++) {
+      try {
+        const ctrl = new AbortController();
+        const tid = setTimeout(() => ctrl.abort(), 15000);
+        const res = await fetch(url.toString(), { method:'GET', mode:'cors', cache:'no-cache', signal: ctrl.signal });
+        clearTimeout(tid);
+
+        console.log('Response status:', res.status);
+
+        if (res.status === 401 || res.status === 403) {
+          console.error('Auth failed - token invalid');
+          throw new Error('TOKEN_INVALID');
+        }
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+
+        const text = await res.text();
+        console.log('Response text:', text.substring(0, 200));
+        
+        if (!text) throw new Error('Empty response');
+        const data = JSON.parse(text);
+
+        if (data.error) {
+          console.error('API error:', data.error);
+          if (data.code === 'TOKEN_INVALID' || data.error === 'TOKEN_INVALID' || data.error === 'Unauthorized') throw new Error('TOKEN_INVALID');
+          throw new Error(data.error);
+        }
+        return data;
+
+      } catch(err) {
+        lastErr = err;
+        console.error('API error attempt ' + i + ':', err.message);
+        if (err.name === 'AbortError') lastErr = new Error('Request timeout — please try again');
+        else if (err.message === 'TOKEN_INVALID' && path !== 'auth/login') {
+          forceLogout('Session expired. Please sign in again.');
+          throw new Error('Session expired');
+        }
+        if (i < retries) await new Promise(r => setTimeout(r, 800 * (i + 1)));
+      }
+    }
+    throw lastErr || new Error('Network error — please refresh');
+  }
+
+  // ─────────────────────────────────────────────
+  //  SPLASH & LOGOUT
+  // ─────────────────────────────────────────────
+  function hideSplash() {
+    const s = document.getElementById('splash-screen');
+    s.classList.add('hidden');
+    setTimeout(() => s.style.display = 'none', 450);
+  }
+
+  function handleLogout() {
+    sessionStorage.removeItem('wv_user');
+    sessionStorage.removeItem('wv_session');
+    sessionStorage.removeItem('wv_gas_url');
+    currentUser = null;
+    currentSession = null;
+    window.location.href = 'index.html';
+  }
+
+  function forceLogout(msg) {
+    sessionStorage.removeItem('wv_user');
+    sessionStorage.removeItem('wv_session');
+    sessionStorage.removeItem('wv_gas_url');
+    currentUser = null;
+    currentSession = null;
+    if (msg) showToast(msg, 'error');
+    window.location.href = 'index.html';
+  }
+
+  // ─────────────────────────────────────────────
+  //  APP SHELL
+  // ─────────────────────────────────────────────
+  async function showApp() {
+    hideSplash();
+    document.getElementById('app-screen').classList.remove('hidden');
+
+    const name = currentUser?.name || 'User';
+    const initials = name.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase();
+    document.getElementById('user-name').textContent = name;
+    document.getElementById('user-avatar').textContent = initials;
+
+    renderNav();
+    updateNotificationBell();
+    applySidebarCollapse();
+    window.WVI18n.injectMainLangToggle();
+
+    // Re-inject toggle on lang change
+    document.addEventListener('wv:langchange', () => {
+      window.WVI18n.injectMainLangToggle();
+      const placeholder = document.getElementById('global-search');
+      if (placeholder) placeholder.placeholder = t('Search...');
+      const loadingText = document.querySelector('[data-i18n="Loading..."]');
+      if (loadingText) loadingText.textContent = t('Loading...');
+    });
+
+    const lastModule = sessionStorage.getItem('lastModule') || 'dashboard';
+    history.replaceState({ module: lastModule }, '', '#' + lastModule);
+    showModule(lastModule, false);
+    updateBackButton();
+  }
+
+  function updateNotificationBell() {
+    const bell = document.getElementById('header-notif-bell');
+    const badge = document.getElementById('header-notif-badge');
+    if (!bell) return;
+    
+    if (canAccessModule('notifications')) {
+      bell.classList.remove('hidden');
+      pollNotifBadge();
+      setInterval(pollNotifBadge, 30000);
+    } else {
+      bell.classList.add('hidden');
+    }
+  }
+
+  async function pollNotifBadge() {
+    const badge = document.getElementById('header-notif-badge');
+    if (!badge || badge.parentElement.classList.contains('hidden')) return;
+    
+    try {
+      const data = await window.WorkVolt.api('notifications/unread', { user_id: currentUser?.user_id || '' });
+      if (data.unread > 0) {
+        badge.classList.remove('hidden');
+        badge.title = data.unread + ' unread';
+      } else {
+        badge.classList.add('hidden');
+      }
+    } catch(e) {
+      // Silent fail - don't spam errors if module not ready
+    }
+  }
+
+  function _navOrderKey() {
+    return 'wv_nav_order_' + (currentUser?.user_id || 'default');
+  }
+  function _getSavedOrder() {
+    try { return JSON.parse(localStorage.getItem(_navOrderKey()) || '[]'); } catch(e) { return []; }
+  }
+  function _saveNavOrder(ids) {
+    localStorage.setItem(_navOrderKey(), JSON.stringify(ids));
+  }
+
+  function renderNav() {
+    const nav = document.getElementById('nav-menu');
+    const role = currentUser?.role || 'Employee';
+
+    const dashLink = `
+      <a href="#dashboard" onclick="showModule('dashboard'); return false;"
+         class="nav-item flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl text-sm font-medium transition-colors"
+         data-module="dashboard">
+        <i class="fas fa-th-large w-4 text-slate-400"></i>
+        <span class="nav-label">${t('Dashboard')}</span>
+      </a>`;
+
+    let addons = (window.INSTALLED_MODULES || []).filter(m => {
+      if (!canAccessModule(m.id)) return false;
+      return true;
+    });
+
+    const savedOrder = _getSavedOrder();
+    if (savedOrder.length) {
+      addons.sort((a, b) => {
+        const ai = savedOrder.indexOf(a.id);
+        const bi = savedOrder.indexOf(b.id);
+        if (ai === -1 && bi === -1) return 0;
+        if (ai === -1) return 1;
+        if (bi === -1) return -1;
+        return ai - bi;
+      });
+    }
+
+    const addonLinks = addons.length ? `
+      <div class="px-3 pt-4 pb-1 flex items-center justify-between">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest nav-section-label">${t('Modules')}</p>
+        <span class="text-[9px] text-slate-300 font-medium drag-hint">${t('drag to reorder')}</span>
+      </div>
+      <div id="nav-sortable" class="space-y-0.5">
+        ${addons.map(m => {
+          const def = ADDON_CATALOGUE[m.id] || {};
+          return `
+            <div class="nav-sortable-item" data-module-id="${m.id}" draggable="true">
+              <a href="#${m.id}" onclick="showModule('${m.id}'); return false;"
+                 class="nav-item flex items-center gap-2 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl text-sm font-medium transition-colors group"
+                 data-module="${m.id}">
+                <i class="fas fa-grip-vertical text-slate-200 group-hover:text-slate-300 text-[10px] flex-shrink-0 cursor-grab"></i>
+                <i class="fas ${def.icon || m.icon} w-4 text-slate-400 flex-shrink-0"></i>
+                <span class="nav-label">${t(def.label || m.label)}</span>
+              </a>
+            </div>`;
+        }).join('')}
+      </div>
+    ` : '';
+
+    const bottomLinks = `
+      <div class="border-t border-slate-100 mt-2 pt-2 space-y-0.5">
+        ${MODULE_ROLES.settings.includes(role) ? `
+        <a href="#settings" onclick="showModule('settings'); return false;"
+           class="nav-item flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl text-sm font-medium transition-colors"
+           data-module="settings">
+          <i class="fas fa-cog w-4 text-slate-400"></i>
+          <span class="nav-label">${t('Settings')}</span>
+        </a>` : ''}
+        ${MODULE_ROLES.store.includes(role) ? `
+        <a href="#store" onclick="showModule('store'); return false;"
+           class="nav-item flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl text-sm font-medium transition-colors"
+           data-module="store">
+          <i class="fas fa-store w-4 text-slate-400"></i>
+          <span class="nav-label">${t('Module Store')}</span>
+        </a>` : ''}
+        ${MODULE_ROLES.roles.includes(role) ? `
+        <a href="#roles" onclick="showModule('roles'); return false;"
+           class="nav-item flex items-center gap-3 px-3 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl text-sm font-medium transition-colors"
+           data-module="roles">
+          <i class="fas fa-shield-alt w-4 text-slate-400"></i>
+          <span class="nav-label">${t('Role Permissions')}</span>
+        </a>` : ''}
+      </div>`;
+
+    nav.innerHTML = dashLink + addonLinks + bottomLinks;
+    _initNavDrag();
+  }
+
+  function _initNavDrag() {
+    const sortable = document.getElementById('nav-sortable');
+    if (!sortable) return;
+    let dragEl = null;
+
+    sortable.querySelectorAll('.nav-sortable-item').forEach(item => {
+      item.addEventListener('dragstart', e => {
+        dragEl = item;
+        setTimeout(() => { item.style.opacity = '0.4'; }, 0);
+        e.dataTransfer.effectAllowed = 'move';
+      });
+      item.addEventListener('dragend', () => {
+        item.style.opacity = '';
+        dragEl = null;
+        const order = Array.from(sortable.querySelectorAll('.nav-sortable-item')).map(el => el.dataset.moduleId);
+        _saveNavOrder(order);
+      });
+      item.addEventListener('dragover', e => {
+        e.preventDefault();
+        if (!dragEl || dragEl === item) return;
+        const rect = item.getBoundingClientRect();
+        if (e.clientY < rect.top + rect.height / 2) {
+          sortable.insertBefore(dragEl, item);
+        } else {
+          sortable.insertBefore(dragEl, item.nextSibling);
+        }
+      });
+    });
+  }
+
+  function showModule(name, push = true) {
+    closeMobileSidebar();
+    sessionStorage.setItem('lastModule', name);
+    if (push) history.pushState({ module: name }, '', '#' + name);
+
+    document.querySelectorAll('.nav-item').forEach(el => {
+      el.classList.toggle('active', el.dataset.module === name);
+    });
+
+    const main = document.getElementById('main-content');
+    main.innerHTML = `
+      <div class="flex items-center justify-center h-64">
+        <i class="fas fa-circle-notch fa-spin text-3xl text-blue-500 opacity-60"></i>
+      </div>`;
+
+    requestAnimationFrame(() => loadPage(name, main));
+    updateBackButton();
+  }
+
+  function loadPage(name, container) {
+    if (window.WorkVoltPages && typeof window.WorkVoltPages[name] === 'function') {
+      window.WorkVoltPages[name](container);
+      return;
+    }
+
+    const existing = document.querySelector(`script[data-page="${name}"]`);
+    if (existing) existing.remove();
+
+    const script = document.createElement('script');
+    script.src = `pages/${name}.js`;
+    script.dataset.page = name;
+    script.onload = () => {
+      if (window.WorkVoltPages && typeof window.WorkVoltPages[name] === 'function') {
+        window.WorkVoltPages[name](container);
+      } else {
+        renderPagePlaceholder(name, container);
+      }
+    };
+    script.onerror = () => renderPagePlaceholder(name, container);
+    document.head.appendChild(script);
+  }
+
+  function renderPagePlaceholder(name, container) {
+    const label = MODULE_LABELS[name] || name;
+    const icon = MODULE_ICONS[name] || 'fa-layer-group';
+    container.innerHTML = `
+      <div class="p-6 md:p-8 fade-in">
+        <div class="max-w-2xl mx-auto mt-16 text-center">
+          <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-50 rounded-2xl mb-6">
+            <i class="fas ${icon} text-blue-400 text-3xl"></i>
+          </div>
+          <h2 class="text-2xl font-extrabold text-slate-800 mb-2">${label}</h2>
+          <p class="text-slate-500 mb-6 text-sm leading-relaxed">
+            This page is ready to be built as its own module.<br>
+            Create <code class="bg-slate-100 px-2 py-0.5 rounded text-blue-600 font-mono text-xs">pages/${name}.js</code> and register it with <code class="bg-slate-100 px-2 py-0.5 rounded text-blue-600 font-mono text-xs">WorkVoltPages.${name}</code>.
+          </p>
+        </div>
+      </div>`;
+  }
+
+  window.addEventListener('popstate', e => {
+    const mod = e.state?.module || 'dashboard';
+    showModule(mod, false);
+  });
+
+  function updateBackButton() {
+    document.getElementById('app-back-btn').classList.toggle('hidden', history.length <= 1);
+  }
+
+  function appGoBack() {
+    history.back();
+  }
+
+  // ─────────────────────────────────────────────
+  //  USER MENU
+  // ─────────────────────────────────────────────
+  function renderUserDropdown() {
+    const inner = document.getElementById('user-dropdown-inner');
+    if (!inner) return;
+
+    const isSuperAdmin = (currentUser?.role === 'SuperAdmin');
+
+    inner.innerHTML = `
+      <div class="px-4 py-2.5 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">${t('Account')}</p>
+      </div>
+      <button onclick="openProfileModal(); closeUserMenu();" class="w-full px-4 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2.5 transition-colors">
+        <i class="fas fa-user-circle text-slate-400 w-4"></i>${t('My Profile')}
+      </button>
+      <button onclick="openSecurityModal(); closeUserMenu();" class="w-full px-4 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2.5 transition-colors">
+        <i class="fas fa-shield-alt text-slate-400 w-4"></i>${t('Security & Password')}
+      </button>
+      
+      ${isSuperAdmin ? `
+      <div class="border-t border-slate-100"></div>
+      <button onclick="openMimicModal(); closeUserMenu();" class="w-full px-4 py-2.5 text-left text-sm text-violet-700 hover:bg-violet-50 flex items-center gap-2.5 transition-colors">
+        <i class="fas fa-user-secret text-violet-400 w-4"></i>${t('Mimic Profile')}
+        <span class="ml-auto text-[10px] text-violet-400 bg-violet-50 border border-violet-200 rounded px-1 font-bold">SA</span>
+      </button>` : ''}
+      
+      <div class="border-t border-slate-100"></div>
+      <button onclick="handleLogout()" class="w-full px-4 py-2.5 text-left text-sm text-red-600 hover:bg-red-50 flex items-center gap-2.5 transition-colors">
+        <i class="fas fa-sign-out-alt text-red-400 w-4"></i>${t('Logout')}
+      </button>
+    `;
+  }
+
+  function toggleUserMenu(e) {
+    e?.stopPropagation();
+    const dd = document.getElementById('user-dropdown');
+    const wasHidden = dd.classList.contains('hidden');
+    dd.classList.toggle('hidden');
+    if (wasHidden) renderUserDropdown();
+  }
+
+  function closeUserMenu() {
+    document.getElementById('user-dropdown').classList.add('hidden');
+  }
+
+  function openProfileModal() { showToast(t('Profile modal — coming soon'), 'info'); }
+  function openSecurityModal() { showToast(t('Security modal — coming soon'), 'info'); }
+
+  // ─────────────────────────────────────────────
+  //  MOBILE SIDEBAR
+  // ─────────────────────────────────────────────
+  function toggleSidebarCollapse() {
+    const sidebar = document.getElementById('sidebar');
+    const collapsed = sidebar.classList.toggle('collapsed');
+    localStorage.setItem('wv_sidebar_collapsed', collapsed ? '1' : '0');
+  }
+
+  function applySidebarCollapse() {
+    if (localStorage.getItem('wv_sidebar_collapsed') === '1') {
+      document.getElementById('sidebar').classList.add('collapsed');
+    }
+  }
+
+  function toggleMobileSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebar-overlay').classList.toggle('visible');
+  }
+  function closeMobileSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('visible');
+  }
+
+  // ─────────────────────────────────────────────
+  //  TOAST
+  // ─────────────────────────────────────────────
+  function showToast(msg, type = 'info', duration = 3500) {
+    const icons = { success:'fa-check-circle', error:'fa-exclamation-circle', info:'fa-info-circle', warning:'fa-triangle-exclamation' };
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.innerHTML = `<i class="fas ${icons[type] || icons.info}"></i><span>${msg}</span>`;
+    document.getElementById('toast-container').appendChild(toast);
+    setTimeout(() => {
+      toast.style.animation = 'toastOut .3s ease forwards';
+      setTimeout(() => toast.remove(), 300);
+    }, duration);
+  }
+
+  document.addEventListener('click', e => {
+    if (!document.getElementById('user-menu-container')?.contains(e.target))
+      closeUserMenu();
+  });
+
+  // Expose globals
+  window.WorkVolt = {
+    api: apiCall,
+    user: () => currentUser,
+    session: () => currentSession,
+    toast: showToast,
+    navigate: showModule,
+  };
+  window.WorkVoltPages = window.WorkVoltPages || {};
+  window.renderNav = renderNav;
+  window._wvRolePermissions = () => _rolePermissions;
+  window._wvUserOverrides = () => _userModuleOverrides;
+  window._wvApplyPermissions = function(perms, overrides) {
+    if (perms) _rolePermissions = perms;
+    if (overrides) _userModuleOverrides = overrides;
+    renderNav();
+  };
+
+  // ─────────────────────────────────────────────
+  //  BOOT SEQUENCE
+  // ─────────────────────────────────────────────
+  window.addEventListener('load', async () => {
+    try {
+      const savedUser = sessionStorage.getItem('wv_user');
+      const savedSession = sessionStorage.getItem('wv_session');
+      const savedUrl = sessionStorage.getItem('wv_gas_url') || (window.sessionData && window.sessionData.gas_url) || '';
+      
+      console.log('Boot check:', { hasUser: !!savedUser, hasSession: !!savedSession, hasUrl: !!savedUrl });
+      
+      if (!savedUser || !savedSession || !savedUrl) {
+        console.log('Missing credentials, redirecting to login');
+        window.location.href = 'index.html';
+        return;
+      }
+
+      API_URL = savedUrl;
+      window.API_URL = savedUrl;
+      currentUser = JSON.parse(savedUser);
+      currentSession = savedSession;
+
+      console.log('Starting app load...');
+
+      try {
+        await loadInstalledModules();
+        console.log('Modules loaded:', INSTALLED_MODULES);
+      } catch (e) {
+        console.error('Module load failed:', e);
+      }
+
+      try {
+        await loadRolePermissions();
+        console.log('Permissions loaded');
+      } catch (e) {
+        console.error('Permissions load failed:', e);
+      }
+
+      hideSplash();
+      await showApp();
+      console.log('App shown successfully');
+      
+    } catch (err) {
+      console.error('Fatal boot error:', err);
+      alert('Failed to start app: ' + err.message);
+      window.location.href = 'index.html';
+    }
+  });
+  </script>
+
+</body>
+</html>
